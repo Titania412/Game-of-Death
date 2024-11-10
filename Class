@@ -1,0 +1,105 @@
+import java.util.*;
+public class Game_of_Death {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int choice;		
+		
+		System.out.println("Your first time logging into the game.");
+		System.out.println("Do you want to: \n1. Go straight to the field.\n2. Go get equipments.  ");
+		choice = sc.nextInt();
+		
+		if(choice ==1) { //1
+			System.out.println("You go straight to the field and encounter a level 5 monster!");
+			System.out.println("Do you want to: \n1. Fight the monster for EXP and items.\n2. Run away as fast as you can.");
+			choice = sc.nextInt();
+			
+			if(choice ==1) { //1-1
+				System.out.println("You decide to fight the monster. After fighitng for a couple mintues, you are at half health while the monster is still at full health.");;
+				System.out.println("Do you want to: \n1. Continue fighting.\n2. Run away with half a health.");
+				choice = sc.nextInt();
+				
+				if(choice ==1) { //1-1-1
+					System.out.println("You continue fighting.");
+					System.out.println("You got kill in the process of the fight.");
+					System.out.println("YOU DIED!");
+					
+			} else if(choice ==2) { //1-1-2
+				System.out.println("You run away from the monster with half a health.");
+				System.out.println("The monster chase after you and kill you!");
+				System.out.println("YOU DIED!");
+		
+				}
+		
+			}else if(choice ==2) { //1-2
+				System.out.println("You quickly run away from the level 5 monster.");
+				System.out.println("Do you want to: \n1. Go get equipments.\n2. Go found a lower level monster.");
+				choice = sc.nextInt();
+				
+					if(choice ==1) { // 1-2-1
+						scenario2();
+						
+		
+					}else if( choice == 2) { // 1-2-2
+						System.out.println("You have found a lower level monster.");
+						System.out.println("The monster saw you and attack you. You get kill by it.");
+						System.out.println("YOU DIED!");
+			
+					}
+				}
+		}else if (choice ==2) {
+			scenario2();
+			
+			}
+		
+		}
+	
+	public static void scenario2() {
+		
+		Scanner sc = new Scanner(System.in);
+		int choice;		
+		
+			//2
+			System.out.println("After getting equipments, what do you want to do?");
+			System.out.println("Do you want to: \n1. Go fight some level 1 monster so you get some level.\n2. Do some starter quest to level up faster.");
+			choice = sc.nextInt();
+			
+				if(choice ==1) { //2-1
+					System.out.println("You found some level 1 monster.");
+					System.out.println("Do you want to: \n1. Use the attack and run tactics.\n2. Charge straight ahead without thinking.");
+					choice = sc.nextInt();
+					
+					if (choice ==1) { //2-1-1
+						System.out.println("You wisely use the attack and run tactics because it is the safer choice.");
+						System.out.println("You have successful defeated a couple level 1 monster and got some EXP, BUT you DIED a couple of times in the process.");
+				
+					} else if(choice ==2) { //2-1-2
+						System.out.println("You stupidly charge at the monster.");
+						System.out.println("The level 1 monster kill you in 3 strikes.");
+						System.out.println("YOU DIED!");
+					
+						}
+					
+			}else if(choice ==2) { //2-2
+				System.out.println("You decide to do some starter quest.");
+				System.out.println("Which quest do you want to do: \n1. Quest: Kill 10 level 1 & 2 monster.\n2. Quest: Collecting material.");
+				choice = sc.nextInt();
+					
+						if (choice ==1) { //2-2-1
+							System.out.println("You choose quest: Kill 10 level 1 & 2 monster.");
+							System.out.println("You are doing really well and was almost finish with the quest, but you get kill by a horde of monster.");
+							System.out.println("YOU DIED!");
+						
+						}else if (choice ==2) { ///2-2-2
+							System.out.println("You choose quest: Collecting material.");
+							System.out.println("You are peaceful collecting the materials, but a monster saw you and attack you. You get chase by monster and it kill you.");
+							System.out.println("YOU DIED!");
+							
+						}	
+					
+	
+				}
+
+		}
+	
+	}
